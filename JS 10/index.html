@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<h1>q1. code to access id as text</h1>
+<p>const world = document.getElementById("text");</p>
+
+<h1>q2. code to access tag as h1</h1>
+<p>const worldd = document.getElementsByTagName("h1");</p>
+
+<h1>q3. code to access class as box</h1>
+<p>const worlddd = document.getElementsByClassName("box");</p>
+
+<h1 id="how">hello</h1>
+
+<h1>q4. create cards</h1>
+
+<div id="one">
+    <div class="three"></div>
+    <div class="three"></div>
+    <div class="three"></div>
+</div>
+<button onclick="change()">Click Here</button>
+
+
+
+<h4>Window</h4>
+- It is the root level element in any web page. <br />
+- All the global variables are defined on the window object. <br />
+- For example, alert(), confirm() are methods defined on the window object.
+<br />
+<h4>Document</h4>
+- It is the direct child of the window object. <br />
+- It is known as Document Object Model (DOM). <br />
+- You can access it via window.document or document. <br />
+- Document Object has many useful methods defined on it. For example,
+document.getElementById(), document.getElementByTagName(),
+document.createElement(), document.querySelector() and many more. <br />
+
+
+
+<h1 class="heading1">hello</h1>
+
+<div class="op">Hello world</div>
+<button onclick="joker()">replaced text</button>
+
+<select name="year" id="year1" onchange="func1()">
+    <option value="17-18">17-18</option>
+    <option value="18-19">18-19</option>
+    <option value="19-20">19-20</option>
+    <option value="20-21">20-21</option>
+    <option value="21-22">21-22</option>
+</select>
+
+<p>selected text is : <span id="umbrella"></span></p>
+
+
+<form action="" name="form1" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" value="">
+    <br><br>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" value="">
+    <br> <br>
+
+    <label for="phone">Phone no.</label>
+    <input type="number" id="phone" value="91">
+    <br> <br>
+
+    <label for="birth">YOB</label>
+    <input type="number" id="birth" value="birth" min="95" max="16">
+    <br> <br>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body{
+    background-color: lightblue;
+}
+
+#one{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
+}
+.three{
+    top: 50vh;
+    left: 25vw;
+    height: 50px;
+    width: 50px;
+    border: 5px solid red;
+}
