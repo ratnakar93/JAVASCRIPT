@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd</title>
+</head>
+<body>
+
+
+
+1. Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind()   
+Call invokes the function and allows you to pass in arguments one by one. 
+Apply invokes the function and allows you to pass in arguments as an array. 
+Bind returns a new function, allowing you to pass in a this array and any number of arguments
+
+Call-
+
+var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
+var person2 = {firstName: 'Kelly', lastName: 'King'};
+
+function say(greeting) {
+    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+}
+
+say.call(person1, 'Hello'); // Hello Jon Kuperman
+say.call(person2, 'Hello'); // Hello Kelly King
+
+
+Apply-
+
+var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
+var person2 = {firstName: 'Kelly', lastName: 'King'};
+
+function say(greeting) {
+    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+}
+
+say.apply(person1, ['Hello']); // Hello Jon Kuperman
+say.apply(person2, ['Hello']); // Hello Kelly King
+
+Bind-
+
+var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
+var person2 = {firstName: 'Kelly', lastName: 'King'};
+
+function say() {
+    console.log('Hello ' + this.firstName + ' ' + this.lastName);
+}
+
+var sayHelloJon = say.bind(person1);
+var sayHelloKelly = say.bind(person2);
+
+sayHelloJon(); // Hello Jon Kuperman
+sayHelloKelly(); // Hello Kelly King
+
+
+2.What are objects in javascript?
+JavaScript objects are containers for named values called properties
+
+let person = {firstName:"Raj", lastName:"Ahuja", age:50, eyeColor:"blue"};
+
+3. What are function constructors?
+The Function() constructor creates a new Function object
+
+// constructor function
+function Person () {
+    this.name = 'John',
+    this.age = 23
+}
+
+// create an object
+const person = new Person();
+
+
+4.Explain prototypes
+The prototype is an object that is associated with every functions and objects by default in JavaScript,
+where function's prototype property is accessible and modifiable and object's prototype property  is not visible.
+
+function Student() {
+    this.name = 'John';
+    this.gender = 'Male';
+}
+
+var studObj1 = new Student();
+studObj1.age = 15;
+alert(studObj1.age); // 15
+
+var studObj2 = new Student();
+alert(studObj2.age); // undefined
+
+5. What is prototype chain
+If an object tries to access the same property that is in the constructor function and the prototype object, the object takes the property from the constructor function
+
+function Person() {
+    this.name = 'Raj'
+}
+
+// adding property 
+Person.prototype.name = 'Rajesh';
+Person.prototype.age = 23
+
+const person1 = new Person();
+
+console.log(person1.name); // Raj
+console.log(person1.age); // 23
+
+6.Give an example of inheritance using function constructor
+
+function human(name, age, money) {
+    this.name = name ;
+    this.age = age ; 
+    this.money = money;
+}
+human.prototype.canEarn = function () {
+    console.log('yes ' + this.name + 'can earn');
+}
+
+7.What are callbacks?
+A JavaScript callback is a function which is to be executed after another function has finished execution. A more formal definition would be 
+Any function that is passed as an argument to another function so that it can be executed in that other function is called as a callback function
+
+8.What is the use of setTimeout?
+setTimeout() The global setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires.
+
+setTimeout(() => {
+    console.log("Delayed for 1 second.");
+  }, "1000")
+    
+9.What are pure functions?
+It depends only on its own arguments.
+It wont try to change variables out of its scope.
+It doesn't produce any side effects
+<script>
+    let val1 = 6;
+    let val2 = 4;
+    function pure() {
+       return val1 * val2;
+    }
+    document.write(pure());
+ </script>
+
+
+
+</body>
+</html>
