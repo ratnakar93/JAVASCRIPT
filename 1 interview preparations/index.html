@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First ones</title>
+</head>
+<body>
+    <H1>JS INTERVIEW QUESTIONS DAILY DISCUSSION</H1>
+
+1. Difference between “ == “ and “ === “ operators.
+The main difference between the == and === operator in javascript is that the == operator does the type conversion of the operands before comparison, 
+whereas the === operator compares the values as well as the data types of the operands
+
+2. What is the spread operator?
+- The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+
+
+3. What are the differences between var, let and const?
+var are in the function scope , hosting is allowed
+let are in the block scope , can reassign the values
+const are in the block scope, can reassign the values
+
+
+4. What is execution context
+The Execution Context contains the code that's currently running, and everything that aids in its execution
+
+
+5. What is creation phase and execution phase?
+In the creation phase, the Execution Context is first associated with an Execution Context Object 
+The Execution Context Object stores a lot of important data which the code in the Execution Context uses during its run-time
+
+
+6. What is meant by first class functions
+A programming language is said to have First-class functions if functions in that language are treated like other variables. 
+So the functions can be assigned to any other variable or passed as an argument or can be returned by another function. 
+JavaScript treat function as a first-class-citizens. This means that functions are simply a value and are just another type of object.
+
+<script>
+    const Geek = (a, b) => {
+        return (a + " " + b);
+    }
+      
+    document.write(Geek("Akshit", "Saxena"));
+</script>
+
+
+
+7. What are closures? Give an example of closure
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). 
+In other words, a closure gives you access to an outer function's scope from an inner function. 
+In JavaScript, closures are created every time a function is created, at function creation time
+
+function init() {
+    var name = 'Mozilla'; // name is a local variable created by init
+    function displayName() {
+      // displayName() is the inner function, a closure
+      console.log(name); // use variable declared in the parent function
+    }
+    displayName();
+  }
+  init();
+    
+</body>
+</html>
